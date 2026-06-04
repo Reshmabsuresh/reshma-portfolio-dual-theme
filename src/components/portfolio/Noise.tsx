@@ -24,7 +24,7 @@ export function Particles() {
       {dots.map((_, i) => (
         <span
           key={i}
-          className="absolute block h-1 w-1 rounded-full bg-white/40"
+          className="absolute block h-1 w-1 rounded-full bg-foreground/30"
           style={{
             top: `${(i * 53) % 100}%`,
             left: `${(i * 37) % 100}%`,
