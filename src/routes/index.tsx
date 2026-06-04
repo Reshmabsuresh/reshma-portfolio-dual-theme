@@ -110,7 +110,7 @@ function Hero() {
               <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90 transition glow">
                 View my work <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#contact" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
+              <a href="#contact" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium hover:bg-foreground/5 transition">
                 Contact me
               </a>
             </motion.div>
@@ -516,7 +516,7 @@ function Tools() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.04 }}
-              className="group glass-strong grad-border rounded-2xl p-5 aspect-square flex flex-col items-center justify-center gap-3 hover:bg-white/[0.06] transition"
+              className="group glass-strong grad-border rounded-2xl p-5 aspect-square flex flex-col items-center justify-center gap-3 hover:bg-foreground/5 transition"
             >
               <div className="h-12 w-12 rounded-xl glass flex items-center justify-center text-foreground/90 group-hover:text-violet transition">
                 <t.icon className="h-6 w-6" />
@@ -568,7 +568,7 @@ function Contact() {
                   { icon: Dribbble, label: "Dribbble" },
                   { icon: Box, label: "Behance" },
                 ].map((s) => (
-                  <a key={s.label} href="#" className="glass grad-border rounded-full px-4 py-2 text-sm inline-flex items-center gap-2 hover:bg-white/10 transition">
+                  <a key={s.label} href="#" className="glass grad-border rounded-full px-4 py-2 text-sm inline-flex items-center gap-2 hover:bg-foreground/5 transition">
                     <s.icon className="h-3.5 w-3.5" /> {s.label}
                   </a>
                 ))}
@@ -584,20 +584,20 @@ function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Name</Label>
-                  <Input id="name" placeholder="Your name" className="bg-white/5 border-white/10 h-11" />
+                  <Input id="name" placeholder="Your name" className="bg-background/60 border-border h-11" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</Label>
-                  <Input id="email" type="email" placeholder="you@company.com" className="bg-white/5 border-white/10 h-11" />
+                  <Input id="email" type="email" placeholder="you@company.com" className="bg-background/60 border-border h-11" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="type" className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Project type</Label>
-                <Input id="type" placeholder="e.g. Mobile app redesign" className="bg-white/5 border-white/10 h-11" />
+                <Input id="type" placeholder="e.g. Mobile app redesign" className="bg-background/60 border-border h-11" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="msg" className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Message</Label>
-                <Textarea id="msg" placeholder="Tell me about the problem you're solving…" className="bg-white/5 border-white/10 min-h-36" />
+                <Textarea id="msg" placeholder="Tell me about the problem you're solving…" className="bg-background/60 border-border min-h-36" />
               </div>
               <Button type="submit" className="w-full h-12 rounded-full bg-foreground text-background hover:opacity-90 glow">
                 Send message <ArrowRight className="ml-2 h-4 w-4" />
