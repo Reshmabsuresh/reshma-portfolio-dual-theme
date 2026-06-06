@@ -190,7 +190,7 @@ function About() {
         <SectionHeading
           kicker="About"
           title={<>A designer who believes <em className="text-gradient not-italic">clarity is a feature</em>.</>}
-          sub="Seven years across consumer fintech, enterprise tooling, and digital health — partnering with product, engineering, and research teams to ship interfaces that feel inevitable."
+          sub="3.5 years across consumer fintech, enterprise tooling, and digital health — partnering with product, engineering, and research teams to ship interfaces that feel inevitable."
         />
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
