@@ -105,7 +105,7 @@ function Hero() {
               behind great products.
             </motion.h1>
             <motion.p {...fadeUp} transition={{ duration: 0.7, delay: 0.15 }} className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground">Reshma Suresh</span> — a senior UX/UI designer crafting intuitive digital experiences that connect business goals with human needs across fintech, enterprise, and health.
+              I'm <span className="text-foreground">Reshma Suresh</span> — a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs across fintech, enterprise, and health.
             </motion.p>
             <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.25 }} className="mt-10 flex flex-wrap items-center gap-3">
               <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90 transition glow">
