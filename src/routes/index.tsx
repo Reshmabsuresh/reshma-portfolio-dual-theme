@@ -180,7 +180,7 @@ function About() {
   ];
   const stats = [
     { v: "48+", l: "Projects shipped" },
-    { v: "7+", l: "Years experience" },
+    { v: "3.5", l: "Years experience" },
     { v: "320", l: "User interviews" },
     { v: "94", l: "Usability tests run" },
   ];
