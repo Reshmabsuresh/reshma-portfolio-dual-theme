@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowRight, ArrowDown, Mail, MapPin, Linkedin, Dribbble,
   Sparkles, Compass, Search, Lightbulb, PenTool, Layers, FlaskConical, Repeat, Rocket,
