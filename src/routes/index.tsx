@@ -27,9 +27,9 @@ void pFintechAsset;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Reshma Suresh — UX/UI Designer" },
-      { name: "description", content: "Portfolio of Reshma Suresh — a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs." },
-      { property: "og:title", content: "Reshma Suresh — UX/UI Designer" },
+      { title: "Reshma Suresh , UX/UI Designer" },
+      { name: "description", content: "Portfolio of Reshma Suresh , a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs." },
+      { property: "og:title", content: "Reshma Suresh , UX/UI Designer" },
       { property: "og:description", content: "Award-quality UX work across fintech, HR, health, and e-commerce." },
       { property: "og:type", content: "website" },
     ],
@@ -380,7 +380,7 @@ function Process() {
         <SectionHeading
           kicker="How I work"
           title={<>A process tuned for <em className="text-gradient not-italic">signal over noise</em>.</>}
-          sub="Eight repeatable moves I adapt to every engagement — from a 2-week sprint to a year-long platform rebuild."
+          sub="Eight repeatable moves I adapt to every engagement , from a 2-week sprint to a year-long platform rebuild."
         />
 
         <div className="mt-16 relative">
@@ -499,7 +499,7 @@ function Tools() {
         <SectionHeading
           kicker="Tools & stack"
           title={<>Crafted with a <em className="text-gradient not-italic">modern toolkit</em>.</>}
-          sub="From classic design tools to AI-native workflows — chosen pragmatically, never for novelty's sake."
+          sub="From classic design tools to AI-native workflows , chosen pragmatically, never for novelty's sake."
         />
         <div className="mt-16 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
           {tools.map((t, i) => (
