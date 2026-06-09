@@ -538,30 +538,35 @@ function Contact() {
                 Let's create <em className="text-gradient not-italic">meaningful digital experiences</em> together.
               </motion.h2>
               <motion.p {...fadeUp} transition={{ delay: 0.15 }} className="mt-6 text-muted-foreground max-w-md">
-                Open to senior product design roles, fractional engagements, and ambitious 0→1 collaborations.
+                Open to Product / UI/UX / AUI Design roles, Full-time / Fractional engagements, and ambitious 0→1 collaborations.
               </motion.p>
 
               <div className="mt-10 space-y-4">
                 {[
-                  { icon: Mail, label: "hello@reshmasuresh.design" },
-                  { icon: MapPin, label: "Dubai, UAE · remote-friendly" },
+                  { icon: Mail, label: "breshmasuresh@gmail.com", href: "mailto:breshmasuresh@gmail.com" },
+                  { icon: Mail, label: "hello@reshmasuresh.design", href: "mailto:breshmasuresh@gmail.com" },
+                  { icon: MapPin, label: "Dubai, UAE", href: null as string | null },
                 ].map((r) => (
                   <div key={r.label} className="flex items-center gap-3 text-sm">
                     <div className="glass h-10 w-10 rounded-xl flex items-center justify-center text-violet">
                       <r.icon className="h-4 w-4" />
                     </div>
-                    <span>{r.label}</span>
+                    {r.href ? (
+                      <a href={r.href} className="hover:text-foreground transition">{r.label}</a>
+                    ) : (
+                      <span>{r.label}</span>
+                    )}
                   </div>
                 ))}
               </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
                 {[
-                  { icon: Linkedin, label: "LinkedIn" },
-                  { icon: Dribbble, label: "Dribbble" },
-                  { icon: Box, label: "Behance" },
+                  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/reshma-suresh12/" },
+                  { icon: Box, label: "Behance", href: "https://www.behance.net/reshmasuresh4" },
+                  { icon: Dribbble, label: "Dribbble", href: "https://dribbble.com/Reshmasuresh" },
                 ].map((s) => (
-                  <a key={s.label} href="#" className="glass grad-border rounded-full px-4 py-2 text-sm inline-flex items-center gap-2 hover:bg-white/10 transition">
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="glass grad-border rounded-full px-4 py-2 text-sm inline-flex items-center gap-2 hover:bg-white/10 transition">
                     <s.icon className="h-3.5 w-3.5" /> {s.label}
                   </a>
                 ))}
