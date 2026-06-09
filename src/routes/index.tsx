@@ -350,7 +350,7 @@ function Work() {
                         <span key={t} className="text-[11px] glass rounded-full px-2.5 py-1 text-muted-foreground">{t}</span>
                       ))}
                     </div>
-                    <div className="text-sm font-medium text-gradient">{p.outcome}</div>
+                    {p.outcome && <div className="text-sm font-medium text-gradient">{p.outcome}</div>}
                   </div>
                 </div>
               </div>
