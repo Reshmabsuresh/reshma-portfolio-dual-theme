@@ -178,7 +178,7 @@ function About() {
         <SectionHeading
           kicker="About"
           title={<>A designer who believes <em className="text-gradient not-italic">clarity is a feature</em>.</>}
-          sub="With 3.5 years of experience in UI/UX design, I began my career as a web designer with a strong foundation in HTML, CSS, and JavaScript. I transitioned into UX because I believe great design isn't just about how a product looks, but about how it genuinely serves the user and solves real problems. In my work, my top priorities are the users, stakeholders, and market needs, ensuring each solution is both meaningful and viable. Driven by strong visualization skills and a deep curiosity for the 'why' behind design decisions, I am dedicated to delivering high-quality, impactful products on time."
+          sub=""
         />
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
