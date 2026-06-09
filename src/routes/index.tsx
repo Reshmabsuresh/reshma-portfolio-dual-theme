@@ -90,7 +90,7 @@ function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          Available for select projects · Q2 2026
+          Available to new opportunities
         </motion.div>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
@@ -105,7 +105,7 @@ function Hero() {
               behind great products.
             </motion.h1>
             <motion.p {...fadeUp} transition={{ duration: 0.7, delay: 0.15 }} className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground">Reshma Suresh</span> — a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs across fintech, enterprise, and health.
+              I'm <span className="text-foreground">Reshma Suresh</span>, a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs across different platforms.
             </motion.p>
             <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.25 }} className="mt-10 flex flex-wrap items-center gap-3">
               <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90 transition glow">
@@ -142,12 +142,6 @@ function Hero() {
           <div className="flex items-center gap-2">
             <ArrowDown className="h-3 w-3 animate-bounce" /> Scroll to explore
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <span>BOTIM · Fintech</span>
-            <span>Enterprise HR</span>
-            <span>Health · Fitness</span>
-            <span>Commerce</span>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -178,36 +172,21 @@ function About() {
     "Design Systems", "Interaction Design", "Prototyping", "Visual Design",
     "Figma", "AI-Assisted Design",
   ];
-  const stats = [
-    { v: "48+", l: "Projects shipped" },
-    { v: "3.5", l: "Years experience" },
-    { v: "320", l: "User interviews" },
-    { v: "94", l: "Usability tests run" },
-  ];
   return (
     <section id="about" className="relative py-32 px-6 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           kicker="About"
           title={<>A designer who believes <em className="text-gradient not-italic">clarity is a feature</em>.</>}
-          sub="3.5 years across consumer fintech, enterprise tooling, and digital health — partnering with product, engineering, and research teams to ship interfaces that feel inevitable."
+          sub="With 3.5 years of experience in UI/UX design, I began my career as a web designer with a strong foundation in HTML, CSS, and JavaScript. I transitioned into UX because I believe great design isn't just about how a product looks, but about how it genuinely serves the user and solves real problems. In my work, my top priorities are the users, stakeholders, and market needs, ensuring each solution is both meaningful and viable. Driven by strong visualization skills and a deep curiosity for the 'why' behind design decisions, I am dedicated to delivering high-quality, impactful products on time."
         />
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
           <motion.div {...fadeUp} className="lg:col-span-7 glass-strong rounded-3xl p-8 lg:p-10">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Design philosophy</div>
             <p className="mt-4 font-display text-3xl md:text-4xl leading-[1.15] tracking-[-0.01em]">
-              "Good design disappears. <span className="text-gradient">Great design feels like it was always there</span> — waiting for the user to arrive."
+              "Design is not just what it looks like and feels like. <span className="text-gradient">Design is how it works</span>."
             </p>
-            <div className="mt-8 h-px bg-gradient-to-r from-border via-violet/40 to-transparent" />
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              {stats.map((s) => (
-                <div key={s.l} className="glass rounded-2xl p-5">
-                  <div className="font-display text-4xl text-gradient">{s.v}</div>
-                  <div className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">{s.l}</div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="lg:col-span-5 space-y-6">
@@ -222,16 +201,21 @@ function About() {
               </div>
             </div>
             <div className="glass-strong rounded-3xl p-8">
-              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Currently</div>
-              <ul className="mt-5 space-y-4">
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">My Experiences</div>
+              <ul className="mt-5 space-y-5">
                 {[
-                  ["2024 — Now", "Senior Product Designer · Fintech"],
-                  ["2021 — 2024", "Lead UX · Enterprise SaaS"],
-                  ["2018 — 2021", "Product Designer · Agencies"],
-                ].map(([when, what]) => (
-                  <li key={what} className="flex gap-5">
-                    <span className="font-mono text-xs text-muted-foreground w-24 shrink-0 pt-0.5">{when}</span>
-                    <span className="text-sm">{what}</span>
+                  { when: "2025 — Present", role: "UX Designer & Active Learner", company: "UX Gym by UX Anudeep" },
+                  { when: "2024 — 2025", role: "UI/UX Designer", company: "Protectol Health, UAE" },
+                  { when: "2024 — 2024", role: "UI / Web / Graphics Designer", company: "Brand Cast Solutions, UAE" },
+                  { when: "2022 — 2023", role: "Web / Graphic Designer", company: "Extreme Media, IND" },
+                  { when: "2021 — 2022", role: "Junior Web Designer", company: "Nyeste Venture, IND" },
+                ].map((e) => (
+                  <li key={e.company} className="flex items-start justify-between gap-4">
+                    <div>
+                      <div className="font-mono text-xs text-muted-foreground">{e.when}</div>
+                      <div className="mt-1 text-sm">{e.role}</div>
+                    </div>
+                    <div className="text-sm text-right text-foreground/90 font-medium">{e.company}</div>
                   </li>
                 ))}
               </ul>
@@ -307,7 +291,7 @@ function Work() {
         <div className="flex items-end justify-between gap-10 flex-wrap">
           <SectionHeading
             kicker="Featured work"
-            title={<>Selected case studies, <em className="text-gradient not-italic">2023 – 2026</em>.</>}
+            title={<>Selected <em className="text-gradient not-italic">project case studies</em>.</>}
           />
           <motion.a {...fadeUp} href="#contact" className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1.5">
             Request full case studies <ArrowRight className="h-4 w-4" />
@@ -424,10 +408,10 @@ function Process() {
 
 const testimonials = [
   {
-    name: "Amal Khoury",
-    title: "Head of Product · BOTIM",
+    name: "Mohammed",
+    title: "VP of Product · Brand Cast Solutions",
     quote: "Reshma turned a tangled transfer flow into something our team is genuinely proud of. Her research instinct is rare.",
-    initials: "AK", tint: "from-violet/40 to-magenta/30",
+    initials: "MO", tint: "from-violet/40 to-magenta/30",
   },
   {
     name: "Daniel Park",
