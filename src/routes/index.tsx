@@ -241,32 +241,30 @@ function About() {
 
 type Project = {
   title: string; category: string; role: string; duration: string;
-  tools: string[]; summary: string; outcome: string; image: string;
+  tools: string[]; summary: string; outcome?: string; image: string;
   span: string; tone: string;
 };
 
 const projects: Project[] = [
   {
-    title: "BOTIM Money Transfer — Trust-first redesign",
+    title: "BOTIM Money Transfer, Trust-first redesign",
     category: "Fintech · Mobile",
-    role: "Lead Product Designer",
-    duration: "6 months",
-    tools: ["Figma", "Maze", "Dovetail"],
-    summary: "Rebuilt the cross-border transfer flow around moments of trust — clarifying fees, exchange rates, and recipient confidence at every step.",
-    outcome: "+38% completion · −22% support tickets",
+    role: "UX Designer",
+    duration: "1 month",
+    tools: ["Figma", "Claude AI", "Leonardo AI"],
+    summary: "Rebuilt the cross-border transfer flow around moments of trust, clarity on every action and recipient confidence at every step.",
     image: pBotim,
     span: "lg:col-span-7 lg:row-span-2",
     tone: "from-violet/30 via-transparent to-cyan/20",
   },
   {
-    title: "HR Management Platform",
-    category: "Enterprise SaaS",
-    role: "Lead UX",
-    duration: "9 months",
-    tools: ["Figma", "FigJam", "Miro"],
-    summary: "Unified payroll, people, and performance into a single composable workspace for 12k+ employees.",
-    outcome: "4.6★ internal NPS · 60% faster onboarding",
-    image: pHr,
+    title: "FinTech Finance Management App",
+    category: "Fintech · Mobile",
+    role: "Product Designer",
+    duration: "3 months",
+    tools: ["Figma", "ChatGPT", "Illustrator"],
+    summary: "A clean, confidence-building finance companion that turns spending, transfers, and budgets into a single calm dashboard, helping users feel in control of every dirham.",
+    image: pFintech,
     span: "lg:col-span-5",
     tone: "from-magenta/30 via-transparent to-violet/20",
   },
@@ -275,21 +273,19 @@ const projects: Project[] = [
     category: "Health · Mobile",
     role: "Product Designer",
     duration: "4 months",
-    tools: ["Figma", "Framer", "Galileo AI"],
+    tools: ["Figma", "ChatGPT", "Illustrator"],
     summary: "An adaptive coaching experience that turns daily metrics into a calm, motivating ritual.",
-    outcome: "2.1× weekly active retention",
     image: pFitness,
     span: "lg:col-span-5",
     tone: "from-cyan/30 via-transparent to-violet/20",
   },
   {
-    title: "E-commerce Experience Redesign",
+    title: "AI Vibe Coding Project, E-commerce Designer Boutique Web App",
     category: "Commerce",
     role: "Senior Designer",
     duration: "5 months",
-    tools: ["Figma", "Hotjar", "ChatGPT"],
+    tools: ["Orchid AI", "Claude AI"],
     summary: "Re-architected discovery and checkout for a premium goods retailer, removing friction in the path to purchase.",
-    outcome: "+27% conversion · +18% AOV",
     image: pEcom,
     span: "lg:col-span-7",
     tone: "from-magenta/30 via-transparent to-cyan/20",
