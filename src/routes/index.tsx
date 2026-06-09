@@ -16,13 +16,11 @@ import heroBg from "@/assets/hero-bg.jpg";
 import portraitAsset from "@/assets/portrait.png.asset.json";
 const portrait = portraitAsset.url;
 import pBotimAsset from "@/assets/project-botim-new.png.asset.json";
-import pFintechAsset from "@/assets/project-fitness.jpg";
+import pFintechAsset from "@/assets/project-fintech.jpg.asset.json";
 import pFitness from "@/assets/project-fitness.jpg";
 import pEcom from "@/assets/project-ecom.jpg";
-import pFintechAssetNew from "@/assets/project-fintech.jpg.asset.json";
 const pBotim = pBotimAsset.url;
-const pFintech = pFintechAssetNew.url;
-void pFintechAsset;
+const pFintech = pFintechAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
