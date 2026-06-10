@@ -283,7 +283,7 @@ const projects: Project[] = [
     title: "Fitness Tracking App",
     category: "Health · Mobile",
     role: "Product Designer",
-    duration: "4 months",
+    duration: "2 months",
     tools: ["Figma", "ChatGPT", "Illustrator"],
     summary: "An adaptive coaching experience that turns daily metrics into a calm, motivating ritual.",
     image: pFitness,
