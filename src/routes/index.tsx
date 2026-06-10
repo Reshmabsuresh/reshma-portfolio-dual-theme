@@ -126,8 +126,8 @@ function Hero() {
               <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90 transition glow">
                 View my work <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#contact" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
-                Contact me
+              <a href="mailto:breshmasuresh@gmail.com" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
+                Send an email
               </a>
             </motion.div>
           </div>
