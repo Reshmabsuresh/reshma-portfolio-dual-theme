@@ -140,7 +140,7 @@ function Hero() {
               <div className="absolute bottom-4 left-4 right-4 glass rounded-2xl p-4 flex items-center justify-between">
                 <div>
                   <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Based in</div>
-                  <div className="text-sm font-medium">Dubai · UAE</div>
+                  <div className="text-sm font-medium">Dubai, United Arab Emirates</div>
                 </div>
                 <div className="text-right">
                   <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Experience</div>
