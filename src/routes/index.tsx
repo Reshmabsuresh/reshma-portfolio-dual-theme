@@ -289,7 +289,7 @@ const projects: Project[] = [
     tools: ["Figma", "ChatGPT", "Illustrator"],
     summary: "An adaptive coaching experience that turns daily metrics into a calm, motivating ritual.",
     image: pFitness,
-    span: "lg:col-span-5",
+    span: "lg:col-span-6",
     tone: "from-cyan/30 via-transparent to-violet/20",
   },
   {
