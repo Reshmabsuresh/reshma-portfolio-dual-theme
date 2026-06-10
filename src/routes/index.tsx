@@ -300,7 +300,7 @@ const projects: Project[] = [
     tools: ["Orchid AI", "Claude AI"],
     summary: "Re-architected discovery and checkout for a premium goods retailer, removing friction in the path to purchase.",
     image: pEcom,
-    span: "lg:col-span-7",
+    span: "lg:col-span-6",
     tone: "from-magenta/30 via-transparent to-cyan/20",
   },
 ];
