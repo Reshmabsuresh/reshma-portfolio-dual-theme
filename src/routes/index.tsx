@@ -13,16 +13,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 import heroBg from "@/assets/hero-bg.jpg";
-import portraitAsset from "@/assets/portrait.png.asset.json";
-const portrait = portraitAsset.url;
-import pBotimAsset from "@/assets/project-botim-new.png.asset.json";
-import pFintechAsset from "@/assets/project-fintech-new.png.asset.json";
-import pFitnessAsset from "@/assets/project-fitness-new.jpg.asset.json";
-import pEcomAsset from "@/assets/project-vibe-ecom.png.asset.json";
-const pBotim = pBotimAsset.url;
-const pFintech = pFintechAsset.url;
-const pFitness = pFitnessAsset.url;
-const pEcom = pEcomAsset.url;
+import portrait from "@/assets/portrait-new.png";
+import pBotim from "@/assets/project-botim-new.png";
+import pFintech from "@/assets/project-fintech-new.png";
+import pFitness from "@/assets/project-fitness-new.jpg";
+import pEcom from "@/assets/project-vibe-ecom.png";
 
 import tChatgpt from "@/assets/tools-svg/chatgpt.svg?raw";
 import tClaude from "@/assets/tools-svg/claude.svg?raw";
