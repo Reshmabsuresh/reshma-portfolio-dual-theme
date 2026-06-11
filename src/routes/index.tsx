@@ -36,16 +36,6 @@ import tSketch from "@/assets/tools-svg/sketch.svg?raw";
 
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Reshma Suresh, UX/UI Designer" },
-      { name: "description", content: "Portfolio of Reshma Suresh, a UX/UI designer crafting intuitive digital experiences that connect business goals with human needs." },
-      { property: "og:title", content: "Reshma Suresh, UX/UI Designer" },
-
-      { property: "og:description", content: "Award-quality UX work across fintech, HR, health, and e-commerce." },
-      { property: "og:type", content: "website" },
-    ],
-  }),
   component: Portfolio,
 });
 
