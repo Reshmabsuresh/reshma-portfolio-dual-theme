@@ -168,3 +168,14 @@
 @utility animate-float { animation: float 6s ease-in-out infinite; }
 @utility animate-float-slow { animation: float-slow 10s ease-in-out infinite; }
 @utility animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+
+/* Uniform icon stroke weight across the site */
+svg.lucide,
+svg.lucide * {
+  stroke-width: 1.5;
+}
+.icon-svg svg,
+.icon-svg svg * {
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}

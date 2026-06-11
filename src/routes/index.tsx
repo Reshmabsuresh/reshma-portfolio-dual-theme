@@ -513,11 +513,11 @@ function Tools() {
               <div className="h-12 w-12 rounded-xl glass flex items-center justify-center overflow-hidden text-foreground/90 group-hover:text-violet transition-colors duration-300">
                 {t.svg ? (
                   <span
-                    className="h-6 w-6 [&_svg]:h-full [&_svg]:w-full inline-flex"
+                    className="icon-svg h-6 w-6 [&_svg]:h-full [&_svg]:w-full inline-flex"
                     dangerouslySetInnerHTML={{ __html: t.svg }}
                   />
                 ) : t.icon ? (
-                  <t.icon className="h-6 w-6" />
+                  <t.icon className="h-6 w-6" strokeWidth={1.5} />
                 ) : null}
               </div>
               <div className="text-xs font-medium text-center">{t.name}</div>
