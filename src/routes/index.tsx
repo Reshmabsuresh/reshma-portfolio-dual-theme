@@ -253,6 +253,7 @@ const projects: Project[] = [
     image: pBotim,
     span: "lg:col-span-6",
     tone: "from-violet/30 via-transparent to-cyan/20",
+    link: "https://www.figma.com/proto/s6zrdUneQZsei59oxgvT35/Botim---International-money-transfer-to-botim-contact?node-id=1-178&page-id=0%3A1&t=EgAbzf8ZNPrxvihh-1",
   },
   {
     title: "FinTech Finance Management App",
@@ -263,8 +264,8 @@ const projects: Project[] = [
     summary: "A clean, confidence-building finance companion that turns spending, transfers, and budgets into a single calm dashboard, helping users feel in control of every dirham.",
     image: pFintech,
     span: "lg:col-span-6",
-
     tone: "from-magenta/30 via-transparent to-violet/20",
+    link: "https://www.behance.net/gallery/212888909/FinTech-Finance-Management-Application",
   },
   {
     title: "Fitness Tracking App",
@@ -276,6 +277,7 @@ const projects: Project[] = [
     image: pFitness,
     span: "lg:col-span-6",
     tone: "from-cyan/30 via-transparent to-violet/20",
+    link: "https://www.behance.net/gallery/211717057/FitTrack-UI-Case-Study-of-a-Fitness-Application",
   },
   {
     title: "AI Vibe Coding Project, E-commerce Designer Boutique Web App",
@@ -287,6 +289,7 @@ const projects: Project[] = [
     image: pEcom,
     span: "lg:col-span-6",
     tone: "from-magenta/30 via-transparent to-cyan/20",
+    link: "https://voidfuturefashion.store/",
   },
 ];
 
