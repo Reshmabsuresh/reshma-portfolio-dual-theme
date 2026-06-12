@@ -172,10 +172,10 @@
 /* Uniform icon stroke weight across the site */
 svg.lucide,
 svg.lucide * {
-  stroke-width: 1.5;
+  stroke-width: 1;
 }
 .icon-svg svg,
 .icon-svg svg * {
-  stroke-width: 1.5;
+  stroke-width: 1;
   vector-effect: non-scaling-stroke;
 }
