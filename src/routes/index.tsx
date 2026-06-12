@@ -239,7 +239,7 @@ function About() {
 type Project = {
   title: string; category: string; role: string; duration: string;
   tools: string[]; summary: string; outcome?: string; image: string;
-  span: string; tone: string;
+  span: string; tone: string; link: string;
 };
 
 const projects: Project[] = [
