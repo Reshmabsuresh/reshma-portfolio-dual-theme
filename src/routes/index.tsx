@@ -182,36 +182,18 @@ function About() {
           sub=""
         />
 
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <motion.div {...fadeUp} className="lg:col-span-7 space-y-6">
-            <div className="glass-strong rounded-3xl p-8 lg:p-10">
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-min">
+          <motion.div {...fadeUp} className="lg:col-span-7">
+            <div className="glass-strong rounded-3xl p-8 lg:p-10 h-full">
               <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Design philosophy</div>
               <p className="mt-4 font-display text-3xl md:text-4xl leading-[1.15] tracking-[-0.01em]">
                 "Design is not just what it looks like and feels like. <span className="text-gradient">Design is how it works</span>."
               </p>
             </div>
-            <div className="glass-strong rounded-3xl p-8 lg:p-10">
-              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Who I am</div>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-foreground/80">
-                "With 3.5 years of experience in UI/UX design, I began my career as a web designer with a strong foundation in HTML, CSS, and JavaScript. I transitioned into UX because I believe great design isn't just about how a product looks, but about how it genuinely serves the user and solves real problems. In my work, my top priorities are the users, stakeholders, and market needs, ensuring each solution is both meaningful and viable. Driven by strong visualization skills and a deep curiosity for the 'why' behind design decisions, I am dedicated to delivering high-quality, impactful products on time."
-              </p>
-            </div>
-            <a
-              href="https://drive.google.com/file/d/1BNr32H4OkOy13dIjaXphwk0nq0vDCGBT/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-strong rounded-3xl p-8 lg:p-10 block hover:bg-white/[0.06] transition"
-            >
-              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Resume</div>
-              <div className="mt-4 inline-flex items-center gap-2 text-foreground hover:text-violet transition">
-                <span className="text-base md:text-lg font-medium">Download CV</span>
-                <ArrowDown className="h-4 w-4" />
-              </div>
-            </a>
           </motion.div>
 
-          <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="lg:col-span-5 space-y-6">
-            <div className="glass-strong rounded-3xl p-8">
+          <motion.div {...fadeUp} transition={{ delay: 0.05 }} className="lg:col-span-5">
+            <div className="glass-strong rounded-3xl p-8 h-full">
               <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Capabilities</div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {skills.map((s) => (
@@ -221,9 +203,36 @@ function About() {
                 ))}
               </div>
             </div>
-            <div className="glass-strong rounded-3xl p-8">
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="lg:col-span-8">
+            <div className="glass-strong rounded-3xl p-8 lg:p-10 h-full">
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Who I am</div>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-foreground/80">
+                "With 3.5 years of experience in UI/UX design, I began my career as a web designer with a strong foundation in HTML, CSS, and JavaScript. I transitioned into UX because I believe great design isn't just about how a product looks, but about how it genuinely serves the user and solves real problems. In my work, my top priorities are the users, stakeholders, and market needs, ensuring each solution is both meaningful and viable. Driven by strong visualization skills and a deep curiosity for the 'why' behind design decisions, I am dedicated to delivering high-quality, impactful products on time."
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ delay: 0.15 }} className="lg:col-span-4">
+            <a
+              href="https://drive.google.com/file/d/1BNr32H4OkOy13dIjaXphwk0nq0vDCGBT/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-strong rounded-3xl p-8 lg:p-10 block hover:bg-white/[0.06] transition h-full"
+            >
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">What I really do</div>
+              <div className="mt-4 inline-flex items-center gap-2 text-foreground hover:text-violet transition">
+                <span className="text-base md:text-lg font-medium">Download Resume</span>
+                <ArrowDown className="h-4 w-4" />
+              </div>
+            </a>
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="lg:col-span-12">
+            <div className="glass-strong rounded-3xl p-8 lg:p-10">
               <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">My Experiences</div>
-              <ul className="mt-5 space-y-5">
+              <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {[
                   { when: "2025 , Present (remote)", role: "UX Designer & Active Learner", company: "UX Gym by UX Anudeep" },
                   { when: "2024 , 2025 (on-site)", role: "UI/UX Designer", company: "Protectol Health, UAE" },
@@ -231,12 +240,10 @@ function About() {
                   { when: "2022 , 2023 (on-site)", role: "Web / Graphic Designer", company: "Extreme Media, IND" },
                   { when: "2021 , 2022 (on-site)", role: "Junior Web Designer", company: "Nyeste Venture, IND" },
                 ].map((e) => (
-                  <li key={e.company} className="flex items-start justify-between gap-4">
-                    <div>
-                      <div className="font-mono text-xs text-muted-foreground">{e.when}</div>
-                      <div className="mt-1 text-sm">{e.role}</div>
-                    </div>
-                    <div className="text-sm text-right text-foreground/90 font-medium">{e.company}</div>
+                  <li key={e.company} className="flex flex-col gap-1">
+                    <div className="font-mono text-xs text-muted-foreground">{e.when}</div>
+                    <div className="text-sm font-medium">{e.role}</div>
+                    <div className="text-sm text-foreground/90">{e.company}</div>
                   </li>
                 ))}
               </ul>
