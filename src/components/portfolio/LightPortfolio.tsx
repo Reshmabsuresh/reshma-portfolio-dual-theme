@@ -4,7 +4,7 @@ import {
   Menu, X, ArrowRight, Sparkles, MapPin, Lightbulb, Heart, Zap, Users,
   ArrowUpRight, Search, FlaskConical, Target, Layers, TestTube, RefreshCw, Rocket,
   Figma, MessageSquare, Pen, Palette, Layout, Bot, Wand2, Frame,
-  Mail, Linkedin, Globe, Send,
+  Mail, Linkedin, Send,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -81,14 +81,14 @@ function LightNavbar() {
           <a href="mailto:breshmasuresh@gmail.com" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             breshmasuresh@gmail.com
           </a>
-          <ThemeToggle className="h-9 w-9 text-muted-foreground hover:text-foreground hover:bg-black/[0.04]" />
+          <ThemeToggle className="h-9 w-9 text-blue-600 bg-blue-50 border border-blue-100 hover:bg-blue-100" />
           <a href="#contact" className="text-sm font-semibold px-5 py-2 rounded-xl bg-foreground text-background hover:bg-foreground/90 transition-all duration-200 shadow-sm">
             Hire Me
           </a>
         </div>
 
         <div className="flex md:hidden items-center gap-1">
-          <ThemeToggle className="h-9 w-9 text-muted-foreground hover:text-foreground hover:bg-black/[0.04]" />
+          <ThemeToggle className="h-9 w-9 text-blue-600 bg-blue-50 border border-blue-100 hover:bg-blue-100" />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-2 rounded-lg hover:bg-black/[0.05] transition-colors"
@@ -265,7 +265,7 @@ function LightHero() {
                 <p className="text-xs font-semibold text-foreground">Design Systems</p>
                 <div className="mt-1.5">
                   <div className="h-1.5 w-16 rounded-full bg-slate-200/80 overflow-hidden">
-                    <div className="h-full w-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500" />
+                    <div className="h-full w-full rounded-full bg-gradient-to-r from-blue-400 to-violet-400" />
                   </div>
                 </div>
               </motion.div>
@@ -278,7 +278,7 @@ function LightHero() {
                 <p className="text-xs font-semibold text-foreground">UX Research</p>
                 <div className="mt-1.5">
                   <div className="h-1.5 w-16 rounded-full bg-slate-200/80 overflow-hidden">
-                    <div className="h-full w-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500" />
+                    <div className="h-full w-full rounded-full bg-gradient-to-r from-blue-400 to-violet-400" />
                   </div>
                 </div>
               </motion.div>
@@ -428,7 +428,7 @@ function LightAbout() {
 type LightProject = {
   id: number; title: string; category: string; tags: string[]; role: string; duration: string;
   tools: string[]; summary: string; image: string; accentText: string; tagColor: string;
-  size: "large" | "small" | "wide"; pill?: string; outcome?: string;
+  size: "large" | "small" | "wide"; pill?: string; outcome?: string; link: string;
 };
 
 const lightProjects: LightProject[] = [
@@ -445,6 +445,7 @@ const lightProjects: LightProject[] = [
     accentText: "text-blue-600",
     tagColor: "bg-blue-50 text-blue-700",
     size: "large",
+    link: "https://www.figma.com/proto/s6zrdUneQZsei59oxgvT35/Botim---International-money-transfer-to-botim-contact?node-id=1-178&page-id=0%3A1&t=EgAbzf8ZNPrxvihh-1",
   },
   {
     id: 2,
@@ -459,6 +460,7 @@ const lightProjects: LightProject[] = [
     accentText: "text-emerald-600",
     tagColor: "bg-emerald-50 text-emerald-700",
     size: "small",
+    link: "https://www.behance.net/gallery/212888909/FinTech-Finance-Management-Application",
   },
   {
     id: 3,
@@ -473,6 +475,7 @@ const lightProjects: LightProject[] = [
     accentText: "text-amber-600",
     tagColor: "bg-amber-50 text-amber-700",
     size: "small",
+    link: "https://www.behance.net/gallery/211717057/FitTrack-UI-Case-Study-of-a-Fitness-Application",
   },
   {
     id: 4,
@@ -488,6 +491,7 @@ const lightProjects: LightProject[] = [
     tagColor: "bg-violet-50 text-violet-700",
     pill: "bg-violet-600",
     size: "wide",
+    link: "https://voidfuturefashion.store/",
   },
 ];
 
@@ -534,6 +538,14 @@ function ProjectModal({ project, onClose }: { project: LightProject; onClose: ()
               ))}
             </div>
           </div>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background font-semibold text-sm hover:opacity-90 transition"
+          >
+            View full case study <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
       </motion.div>
     </motion.div>
@@ -565,13 +577,18 @@ function BentoCard({ project, index, className }: { project: LightProject; index
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-          <motion.div
+          <motion.a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0.8 }}
             transition={{ duration: 0.2 }}
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center"
+            aria-label={`Open ${project.title} externally`}
           >
             <ArrowUpRight className="w-4 h-4 text-foreground" />
-          </motion.div>
+          </motion.a>
           {project.outcome && (
             <div className={`absolute bottom-4 left-4 px-3 py-1.5 rounded-full text-xs font-semibold text-white shadow-sm ${project.pill}`}>
               {project.outcome}
@@ -591,8 +608,8 @@ function BentoCard({ project, index, className }: { project: LightProject; index
               ))}
             </div>
           )}
-          <div className="flex items-center justify-between pt-4 border-t border-[#EBEBEA] gap-2">
-            <span className="text-xs text-muted-foreground whitespace-nowrap">{project.role} · {project.duration}</span>
+          <div className="flex items-start justify-between pt-4 border-t border-[#EBEBEA] gap-2">
+            <span className="text-xs text-muted-foreground whitespace-nowrap pt-0.5">{project.role} · {project.duration}</span>
             <div className="flex gap-1.5 flex-wrap justify-end">
               {project.tools.map((t) => (
                 <span key={t} className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-white border border-[#EBEBEA] text-muted-foreground">{t}</span>
@@ -815,6 +832,12 @@ function LightTools() {
   );
 }
 
+function encodeFormData(data: Record<string, string>) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
+}
+
 function LightContact() {
   const [formData, setFormData] = useState({ name: "", email: "", projectType: "", message: "" });
   const [sending, setSending] = useState(false);
@@ -823,11 +846,20 @@ function LightContact() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1400));
-    setSent(true);
-    setSending(false);
-    toast.success("Message sent! I'll reply within 24 hours.", { duration: 5000 });
-    setFormData({ name: "", email: "", projectType: "", message: "" });
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData({ "form-name": "contact-light", ...formData }),
+      });
+      setSent(true);
+      toast.success("Message sent! I'll reply within 24 hours.", { duration: 5000 });
+      setFormData({ name: "", email: "", projectType: "", message: "" });
+    } catch {
+      toast.error("Something went wrong sending your message. Please email me directly instead.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -865,7 +897,8 @@ function LightContact() {
                 <button onClick={() => setSent(false)} className="mt-6 text-sm text-blue-600 hover:underline">Send another</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} name="contact-light" data-netlify="true" className="space-y-5">
+                <input type="hidden" name="form-name" value="contact-light" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-xs font-semibold text-foreground/70 uppercase tracking-wider mb-2 block">Name</label>
@@ -965,7 +998,6 @@ function LightContact() {
               <div className="flex gap-3">
                 {[
                   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/reshma-suresh12/", color: "hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" },
-                  { icon: Globe, label: "Web", href: "https://reshmasureshuxdesigner.online/", color: "hover:bg-violet-50 hover:text-violet-600 hover:border-violet-200" },
                   { icon: BehanceIcon, label: "Behance", href: "https://www.behance.net/reshmasuresh4", color: "hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200" },
                 ].map((s) => (
                   <a
