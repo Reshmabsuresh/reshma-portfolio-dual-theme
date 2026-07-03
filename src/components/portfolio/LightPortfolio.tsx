@@ -248,7 +248,7 @@ function LightHero() {
             initial={{ opacity: 0, x: 32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden lg:flex justify-center pt-28"
+            className="hidden lg:flex justify-center pt-36"
           >
             <div className="relative">
               <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-blue-100 via-violet-50 to-cyan-50 blur-2xl opacity-70" aria-hidden="true" />
@@ -600,7 +600,7 @@ function BentoCard({ project, index, className }: { project: LightProject; index
           <h3 className="font-display font-bold text-[17px] text-foreground tracking-tight mb-2 group-hover:opacity-70 transition-opacity leading-snug">
             {project.title}
           </h3>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">{project.summary}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.summary}</p>
           {project.tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5 mb-4">
               {project.tags.map((tag) => (
