@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
+import CLOUDKITCHEN_IMG from "@/assets/project-cloudkitchen.png";
 
 const ORB_IMG = "https://media.base44.com/images/public/6a21463fef8b80e04de687ea/b865d12e0_generated_image.png";
 const PORTRAIT = "https://media.base44.com/images/public/6a21463fef8b80e04de687ea/ae3640e36_Firefly_GeminiFlash_makeskinsmoothnotaddmakeup976711.png";
@@ -491,6 +492,21 @@ const lightProjects: LightProject[] = [
     size: "wide",
     link: "https://voidfuturefashion.store/",
   },
+  {
+    id: 5,
+    title: "Kitchen Command, Cloud Kitchen Operations Dashboard",
+    category: "Product Design · Internal Tools",
+    tags: [],
+    role: "Product Designer",
+    duration: "6 weeks",
+    tools: ["Figma", "Claude AI"],
+    summary: "Designed a real-time operations dashboard for a multi-brand cloud kitchen in Dubai, tracking orders from arrival to dispatch, monitoring station load, and surfacing at-risk orders before they breach, through a calm, spacious interface built for clarity under pressure.",
+    image: CLOUDKITCHEN_IMG,
+    accentText: "text-orange-600",
+    tagColor: "bg-orange-50 text-orange-700",
+    size: "wide",
+    link: "https://www.figma.com/proto/yuXLWj0CJLZgbn079kUWPi/Easy-peasy---Cloud-Kitchen?node-id=375-9875&viewport=-929%2C-223%2C0.32&t=mxWIARWEy7DTdy3w-1&scaling=min-zoom&content-scaling=fixed&page-id=56%3A1586",
+  },
 ];
 
 function ProjectModal({ project, onClose }: { project: LightProject; onClose: () => void }) {
@@ -648,6 +664,7 @@ function LightWork() {
           <div className="md:col-span-1"><BentoCard project={lightProjects[1]} index={1} className="h-full" /></div>
           <div className="md:col-span-1"><BentoCard project={lightProjects[2]} index={2} className="h-full" /></div>
           <div className="md:col-span-2"><BentoCard project={lightProjects[3]} index={3} className="h-full" /></div>
+          <div className="md:col-span-3"><BentoCard project={lightProjects[4]} index={4} className="h-full" /></div>
         </div>
       </div>
     </section>
